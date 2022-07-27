@@ -1,0 +1,252 @@
+
+<div class="container mt-4 mb-5">
+  <div class="row"> 
+    <div class="col-md-6">
+      <div class="table-title">
+          <div class="row">
+              <div class="col-sm-5">
+                  <h2><b>Register</b></h2>
+              </div>
+          </div>
+      </div>
+      <form [formGroup]="registerForm" autocomplete="off" style="margin: auto;">
+        
+      <div *ngIf="step==1">
+        <h2>Applicant Details</h2>
+      <div formGroupName="customer" >
+         
+        <div class="form-group">
+          
+          <label>Enter Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Full Name"
+            formControlName="fullName"
+            value={{cus.fullName}}
+          />
+      </div>
+      <div class="form-group">
+          <label>Enter Gender Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Gender"
+            formControlName="gender"
+            value={{cus.gender}}
+          />
+        </div>
+        
+        <div class="form-group">
+          <label>Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+            formControlName="email"
+            value={{cus.email}}
+          />
+        </div>
+        <div class="form-group">
+          <label>Pancard No address</label>
+          <input
+            type="pancardNo"
+            class="form-control"
+            placeholder="Enter pancardNo"
+            formControlName="pancardNo"
+            value={{cus.pancardNo}}
+          />
+        </div>
+        <div class="form-group">
+          <label>Enter Mobile No </label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Mobile Number"
+            formControlName="mobileNo"
+            value={{cus.mobileNo}}
+          />
+        </div>
+        <div class="form-group">
+          <label>loanAmount </label>
+          <input
+            type="loanAmount"
+            class="form-control"
+            placeholder="Enter loanAmount"
+            formControlName="loanAmount"
+            value={{cus.loanAmount}}
+          />
+          </div>
+         
+       
+           
+        </div>
+     
+       
+       
+      <div class="form-group">
+          <label>Profession</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter profession"
+            formControlName="profession"
+            />
+      </div>
+
+      <div class="form-group">
+          <label>DOB</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter dob"
+            formControlName="dob"
+            />
+      </div>
+
+          <div class="form-group">
+              <label>Age</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Age"
+                formControlName="age"
+                />
+          </div>
+          <div class="form-group">
+              <label>AnnualIncome</label>
+              <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter AnnualIncome"
+                  formControlName="annualincome"
+                  />
+          </div>
+        </div>
+        
+        <div *ngIf="step==2">
+          <h2>Address Details</h2>
+          <div formGroupName="paddr">
+              
+              <div class="form-group">
+                  <label>AreaName</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter AreaName"
+                    formControlName="areaName"
+                    />
+              </div>
+              <div class="form-group">
+                  <label>CityName</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter CityName"
+                    formControlName="cityName"
+                    />
+              </div>
+              <div class="form-group">
+                  <label>StateName</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter StateName"
+                    formControlName="stateName"
+                    />
+              </div>
+              <div class="form-group">
+                  <label>PincodeNo</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter PincodeNo"
+                    formControlName="pincodeNo"
+                    />
+              </div>
+             
+          </div>
+        </div>
+        <div *ngIf="step==3">
+          <h2>Property Details</h2>
+          <div formGroupName="propertydetails">
+              
+              <div class="form-group">
+                  <label>Property Type</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter PropertyType"
+                    formControlName="propertyType"
+                    />
+              </div>
+              <div class="form-group">
+                  <label>Property Price</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter PropertyPrice"
+                    formControlName="propertyPrice"
+                    />
+              </div>
+              <div class="form-group">
+                  <label>Property Location</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter PropertyLocation"
+                    formControlName="propertyLocation"
+                    />
+              </div>
+              </div>
+              </div>
+              <div *ngIf="step==4">
+                <h2>Bank Details</h2>
+          <div formGroupName="bankDetails">
+                
+              <div class="form-group">
+                  <label>Account Number</label>
+                  <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter AccountNo"
+                  formControlName="accountNo"
+                  />
+              </div>
+              <div class="form-group">
+                  <label>IFSC Code</label>
+                  <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter IFSCCode"
+                  formControlName="ifscCode"
+                  />
+              </div>
+              <div class="form-group">
+                  <label>BankName</label>
+                  <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter BankName"
+                  formControlName="bankName"
+                  />
+              </div>
+              <div class="form-group">
+                  <label>Branch Address</label>
+                  <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter BranchAddress"
+                  formControlName="branchAddress"
+                  />
+              </div>
+          </div>
+     </div>
+          <button class="btn btn-success" *ngIf="step!=4" (click)="next()">Next</button>&nbsp;&nbsp;
+          <button class="btn btn-success" *ngIf="step!=1" (click)="previous()">Previous</button>&nbsp;&nbsp;
+        <button class="btn btn-success"  type="submit" (click)="onSubmit(cus.customerId)">Register</button>
+      </form>
+    </div>
+</div>

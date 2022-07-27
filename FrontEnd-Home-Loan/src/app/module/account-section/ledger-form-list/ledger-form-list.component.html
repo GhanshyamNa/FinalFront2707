@@ -1,0 +1,57 @@
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h2>Loan <b>Approved List</b></h2>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                <th> ledgerId</th>
+                <th> customerName</th>
+                <th> ledgerCreationDate</th>
+                <th> totalLoanAmount</th>
+                <th> payableAmountWithIntrest</th>
+                <th> tenureInYear</th>
+                <th> monthlyEMI</th>
+                <th>amountPaidTillDate</th>
+                <th>remainingAmount</th>
+                <th>defaulterCount</th>
+                <th>previousEmiStatus</th>
+                <th>currentMonthEmiStatus</th>
+                <th>loanEndDate</th>
+                <th>loanStatus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of ledgerlist">
+                        <td>{{data.ledgerId}}</td>
+                        <td>{{data.customerName}}</td>
+                        <td>{{data.ledgerCreationDate}}</td>
+                        <td>{{data.totalLoanAmount}}</td>
+                        <td>{{data.payableAmountWithIntrest}}</td>
+                        <td>{{data.monthlyEMI}}</td>
+                        <td>{{data.amountPaidTillDate}}</td>
+                        <td>{{data.remainingAmount}}</td>
+                        <td>{{data.defaulterCount}}</td>
+                        <td>{{data.monthlyEMI}}</td>
+                        <td>{{data.previousEmiStatus}}</td>
+                        <td>{{data.currentMonthEmiStatus}}</td>
+                        <td>{{data.loanEndDate}}</td>
+                        <td>{{data.loanStatus}}</td>
+                       
+                        
+                    </tr>
+                    <div style="text-align: center;">
+                    <button  class="btn btn-info" (click)="filedownload()">Export Excel Ledger Report</button>
+                    </div>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> 
+

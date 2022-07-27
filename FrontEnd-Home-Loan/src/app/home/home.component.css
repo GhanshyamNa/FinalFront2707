@@ -1,0 +1,166 @@
+*{ 
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+ }
+  .main-container{
+ 	width: 1400px;
+ 	margin: 0 auto;
+ }
+ .container{
+ 	width: 1014px;
+ 	margin: 0 auto;
+ }
+ .LogIn-Button{
+    font-size: 25px;
+    text-decoration: none;
+    border: 3px solid gray;
+    border-radius: 5px;
+   padding: 0px 20px 0px 20px;
+   margin-left: 15px;
+   opacity: 0.5;
+   
+  transition: padding 0.3s, font-size 0.3s;
+ }
+ button:hover{
+	font-size: 27px;
+    text-decoration: none;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
+   padding: 0px 22px 0px 22px;
+   margin-left: 15px;
+   opacity: 0.4;
+   
+ }
+
+	 /* ****************************************************************** */
+	 /* *********************** DropDown list ************************* */
+	 /* ****************************************************************** */
+
+ 
+.dropdown {
+	position: relative;
+	display: inline-block;
+  }
+
+  span{
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #4b95a1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+	border: 2px groove black;
+	border-radius: 10px 0px 10px 0px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+  
+	 /* ****************************************************************** */
+	 /* ***********************Header Starts Here************************* */
+	 /* ****************************************************************** */
+
+	 .nav-bg{
+	 	background-color: #4b95a1
+	 }
+	 .header-text{
+	 	float: left;
+	 }
+	 .nav{ 
+	 	float: right;
+	 	padding-top: 42px
+	  }
+	  .nav li{
+	  	float: left;
+	  	list-style-type: none;
+	  	padding: 0 25px;
+
+	  }
+
+	  .nav a{ 
+	  	text-decoration: none;
+	  	color: white;
+	  	font-size: 18px;
+	  }
+	  .clear{ 
+	  	clear: both;
+	   }
+
+	   .header-text h1{
+	 	font-size: 40px;
+	 	color: #fff;
+	 	padding:30px 0 29px 0;
+	 } 
+		/* ****************************************************************** */
+		/* ***********************Header Ends Here*************************** */
+		/* ****************************************************************** */
+
+		/*******************************************************************/
+		/*****************  Banner Starts Here *****************************/
+		/*******************************************************************/
+		
+		 	.banner-img img{
+		 		width: 100%;
+		 	}
+		 	.banner-container{
+		 		width: 100%;
+		 		position: relative;
+		 	}
+
+			.scrolling-text{
+				position: absolute;
+				top: 0%;
+				text-align:  center;
+				width: 100%;
+			   display: block;
+			   margin:10px;
+			   color: #fff;
+			}
+			.banner-text {
+				position: absolute;
+				top: 30%;
+				text-align:  center;
+				width: 55%;
+			   display: block;
+			   margin:10px;
+
+			}
+			
+			.banner-text {
+				position: absolute;
+				top: 30%;
+				left: 25%;
+				text-align:  center;
+				width: 55%;
+			   display: block;
+			   margin:10px;
+
+			}
+			
+		 	.banner-text h2{
+		 		font-size: 35px;
+		 		color: #e4e4e4;
+		 		font-family: arial unicode MS;
+		 		padding-bottom: 50px;
+
+		 	}
+		 	.banner-text a{
+		 		font-size: 25px;
+		 		color: #e4e4e4;
+		 		text-decoration: none;
+		 		border: 3px solid #afb1b4;
+		 		border-radius: 5px;
+                padding: 10px 30px 10px 40px;
+                margin-left: 15px;
+
+		 	}

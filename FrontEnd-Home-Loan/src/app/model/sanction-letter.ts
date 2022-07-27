@@ -1,0 +1,13 @@
+import { LoanApprovedList } from "./loan-approved-list";
+
+export class SanctionLetter {
+
+    sanctionId: number;
+    sanctionDate: string;
+    status: string;
+    monthlyEMIAmount:number;
+    principalAmount:number;
+    totalInterest: number;
+    totalAmount:number;
+    lal: LoanApprovedList;
+}

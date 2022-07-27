@@ -1,0 +1,38 @@
+<p>viewequiry works!</p>
+
+<table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        
+       <th>Title</th>
+       <td>FullName</td>
+       <td>Gender</td>
+       <th >MobileNo</th>
+       <td>Email</td>
+       <td>pancardNo</td>
+       <td>LoanAmount</td>
+       
+       <!-- <th>Cibil Status</th> -->
+     <th>Check Cibil Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cus of customer" >
+
+      <td>  {{cus.title}}</td>
+      <td>  {{cus.fullName}}</td>
+      <td>  {{cus.gender}}</td>
+      <td>  {{cus.mobileNo}}</td>
+      <td>  {{cus.email}}</td>
+      <td>  {{cus.pancardNo}}</td>
+      <td>  {{cus.loanAmount}}</td>
+
+      <td><button  class="btn btn-success" (click)="add(cus)">Apply</button>   </td>
+        
+      </tr>
+ 
+    </tbody>
+  </table>
+  <div class="text-right">
+  </div>
+  

@@ -1,0 +1,285 @@
+<h2
+  class="hoverAnim"
+  style="
+    font-weight: bold;
+    text-align: center;
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+  "
+>
+  Enquery Here
+</h2>
+<div class="container mt-4 mb-5">
+  <div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="customerRegisterationForm" autocomplete="off">
+        <div class="form-group">
+          <select
+            id="title"
+            name="title"
+            style="width: 81px; height: 25px"
+            tabindex="1"
+            required="required"
+            formControlName="title"
+            [(ngModel)]="customer.title"
+          >
+            <option value="" selected>Title</option>
+            <option value="Mr.">Mr.</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Ms.">Ms.</option>
+            <option value="Shri.">Shri.</option>
+            <option value="Dr.">Dr.</option>
+            <option value="CA">CA</option>
+            <option value="Er.">Er.</option>
+            <option value="Prof.">Prof.</option>
+            <option value="Smt">Smt.</option>
+            <option value="Kum.">Kum.</option>
+            <option value="Kumari">Kumari</option>
+            <option value="Master">Master</option>
+          </select>
+        </div>
+
+
+        <div class="form-group">
+          <label>Enter Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Full Name"
+            formControlName="fullName"
+            [(ngModel)]="customer.fullName"
+          />
+        </div>
+        <div
+          *ngIf="
+            customerRegisterationForm.controls['fullName'].touched &&
+            customerRegisterationForm.controls['fullName'].invalid
+          "
+        >
+          <span
+            *ngIf="
+              customerRegisterationForm.get('fullName')!.hasError('required')
+            "
+            style="color: red"
+            >FullName is Required</span
+          >
+        </div>
+
+        <div class="form-group">
+          <label>Enter Gender Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Gender"
+            formControlName="gender"
+            [(ngModel)]="customer.gender"
+          />
+        </div>
+        <div
+          *ngIf="
+            customerRegisterationForm.controls['gender'].touched &&
+            customerRegisterationForm.controls['gender'].invalid
+          "
+        >
+          <span
+            *ngIf="
+              customerRegisterationForm.get('gender')!.hasError('required')
+            "
+            style="color: red"
+            >Gender is Required</span
+          >
+        </div>
+
+        <div class="form-group">
+          <label>Enter Mobile No </label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Mobile Number"
+            formControlName="mobileNo"
+            [(ngModel)]="customer.mobileNo"
+          />
+        </div>
+        <div
+          *ngIf="
+            customerRegisterationForm.controls['mobileNo'].touched &&
+            customerRegisterationForm.controls['mobileNo'].invalid
+          "
+        >
+          <span
+            *ngIf="
+              customerRegisterationForm.get('mobileNo')!.hasError('required')
+            "
+            style="color: red"
+            >Mobile-No is Required</span
+          >
+        </div>
+
+        <div class="form-group">
+          <label>Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+            formControlName="email"
+            [(ngModel)]="customer.email"
+          />
+        </div>
+        <div
+          *ngIf="
+            customerRegisterationForm.controls['email'].touched &&
+            customerRegisterationForm.controls['email'].invalid
+          "
+        >
+          <span
+            *ngIf="
+              customerRegisterationForm.get('email')!.hasError('required')
+            "
+            style="color: red"
+            >Email must Required</span
+          >
+        </div>
+        
+        <div class="form-group">
+          <label>Pancard No address</label>
+          <input
+            type="pancardNo"
+            class="form-control"
+            id="exampleInputpan"
+            aria-describedby="emailHelp"
+            placeholder="Enter pancardNo"
+            formControlName="pancardNo"
+            [(ngModel)]="customer.pancardNo"
+          />
+        </div>
+        <div
+          *ngIf="
+            customerRegisterationForm.controls['pancardNo'].touched &&
+            customerRegisterationForm.controls['pancardNo'].invalid
+          "
+        >
+          <span
+            *ngIf="
+              customerRegisterationForm.get('pancardNo')!.hasError('required')
+            "
+            style="color: red"
+            >Pancard No must Required</span
+          >
+        </div>
+
+        
+        <div class="form-group">
+          <label>loanAmount </label>
+          <input
+            type="loanAmount"
+            class="form-control"
+            id="exampleInputloanammount"
+            aria-describedby="emailHelp"
+            placeholder="Enter loanAmount"
+            formControlName="loanAmount"
+            [(ngModel)]="customer.loanAmount"
+          />
+        </div>
+        <div
+          *ngIf="
+            customerRegisterationForm.controls['loanAmount'].touched &&
+            customerRegisterationForm.controls['loanAmount'].invalid
+          "
+        >
+          <span
+            *ngIf="
+              customerRegisterationForm.get('loanAmount')!.hasError('required')
+            "
+            style="color: red"
+            >Loan Ammount must Required</span
+          >
+        </div>
+      
+        <button
+          type="submit"
+          [disabled]="isValid"
+          (click)="registerCustomer()"
+          class="btn btn-primary"
+        >
+          Submit
+        </button>
+        <button
+          type="button"
+          value="Clear"
+          (click)="clear()"
+          class="btn btn-primary ml-5"
+        >
+          Reset
+        </button>
+        <button
+          type="button"
+          value="Clear"
+          (click)="goToLogin()"
+          class="btn btn-primary ml-5"
+        >
+          Go to Login
+        </button>
+      </form>
+    </div>
+
+    <!-- Side bar -->
+    <div class="col-lg-6 mt-4">
+      <div
+        style="
+          border-style: solid;
+          border-color: #6a3f0c;
+          padding: 2%;
+          border-radius: 2%;
+        "
+      >
+        <div>
+          <p style="color: #129f3f">
+            <strong>Customer Information</strong>
+          </p>
+          <p>Welcome to Home-Loan-Finance Portal!</p>
+          <p>
+            Home-Loan-Finance Portal provides single window for You to access information
+            about Home-loan schemes provided by banks and make applications
+            for Home Loans.
+          </p>
+          <p>
+            If you want to apply for Home-loan on Home-Loan-Finance portal, you must
+            register on portal. Please provide essential details as mentioned in
+            registration form.
+          </p>
+          <p></p>
+          <p style="color: #2ac119">
+            <strong>Important Instructions</strong>
+          </p>
+          <ul style="list-style-type: circle">
+            <li>
+              Please ensure that the registration details filled in are correct
+            </li>
+            
+          </ul>
+
+          <p style="color: #1da13a">
+            <strong>Guidelines for Registering on Home-Loan Portal </strong>
+          </p>
+          <ul style="list-style-type: circle">
+            <li>
+              Name- Please enter Name as per Your Record or as
+              per the Documents attached with your loan application
+            </li>
+            <li>
+              Mobile Number- Enter a valid mobile number. Student can provide
+              mobile number of parent/guardian
+            </li>
+            <li>
+              Email ID- Enter a valid email ID. Email ID will not be allowed to
+              change. All necessary communications will be sent on this email
+              ID.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<p>documentupload works!</p>
+
+<div class="table-title">
+    <div class="row">
+        <div class="col-sm-5">
+            <h3><b>Document upload form</b></h3>
+        </div>
+    </div>
+ </div>
+ <div class="tbl">
+    <form>
+    <table>
+        <tr>
+            <td>AdharCard :</td>
+            <td><input type="file" (change)="onselectedFile1($event)"></td>
+        </tr>
+        <tr>
+            <td>PanCard :</td>
+            <td> <input type="file" (change)="onselectedFile2($event)"></td>
+        </tr>
+        <tr>
+            <td>Photo :</td>
+            <td><input type="file" (change)="onselectedFile3($event)"></td>
+        </tr>
+        <tr>
+            <td>Signature :</td>
+            <td><input type="file" (change)="onselectedFile4($event)"></td>
+        </tr>
+        <tr>
+            <td>AddressProof :</td>
+            <td><input type="file" (change)="onselectedFile5($event)"></td>
+        </tr>
+        <tr>
+            <td>IncomeDocument : </td>
+            <td><input type="file" (change)="onselectedFile6($event)"></td>
+        </tr>
+        <tr>
+            <td> PropertyDocument : </td>
+            <td><input type="file" (change) ="onselectedFile7($event)"></td>
+        </tr>
+        <tr>
+            <td> Blank Cheque :  </td>
+            <td><input type="file" (change) ="onselectedFile8($event)"></td>
+        </tr>
+        <tr>
+            <td>Guaranter Stamp : </td>
+            <td><input type="file" (change) ="onselectedFile9($event)"></td>
+        </tr>
+        <tr>
+            <td>Guaranter PropertyDoc :  </td>
+            <td><input type="file" (change) ="onselectedFile10($event)"></td>
+        </tr>
+    </table>
+    <button class="btn btn-success" (click) = "save(cus.customerId)">Upload Documents</button>
+</form> 
+ </div>
+ 
+     <br>
+ 
+ 
+     <router-outlet></router-outlet>  
+ 
